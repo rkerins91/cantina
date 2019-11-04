@@ -1,0 +1,15 @@
+{
+  "name": "cantina",
+  "version": "1.0.0",
+  "description": "Cantina Selector Project",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "bin": {
+    "selector": "./bin/index.js"
+  },
+  "author": "Ryan Kerins",
+  "license": "ISC",
+  "dependencies": {}
+}
