@@ -15,3 +15,8 @@ The different types of selectors are classes, classNames, and identifiers.
 To use class selector, run command 'selector [put class here]'.
 To use classNames selector, run command 'selector .[put className here]'.
 To use identifier selector, run command 'selector /[put identifier here]'.
+
+
+### Compound Selector Attempt
+
+On branch 'multiSelect-attempt', there is a solution for compounding multiple selectors together, such as the command 'selector StackView .column' to view all StackViews with a className of column. To use this functionality, simply add all the selectors separated by a space. 
