@@ -4,7 +4,6 @@ const multiSelect = (possibleResults, selectors) => {
   let matchedResults = []
   const selector = selectors[0]
   if (selectors.length === 0) {
-
     return possibleResults
   }
 
@@ -13,14 +12,14 @@ const multiSelect = (possibleResults, selectors) => {
 
   // if classNames has match 
   else if (selector[0] === '.') {
-    matchedResults = possibleResults.filter((ele, idx) => {
+    matchedResults = possibleResults.filter(ele => {
       return ele.classNames.includes(selector.slice(1))
     })
   }
 
   // if identifier has match 
   else if (selector[0] === '/') {
-    matchedResults = possibleResults.filter((ele, idx) => {
+    matchedResults = possibleResults.filter(ele => {
       return ele.identifier === selector.slice(1)
     })
   }
@@ -28,7 +27,7 @@ const multiSelect = (possibleResults, selectors) => {
   // else we have a class selector
 
   else {
-    matchedResults = possibleResults.filter((ele, idx) => {
+    matchedResults = possibleResults.filter(ele => {
       return ele.identifier === selector
     })
   }
