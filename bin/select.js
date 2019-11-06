@@ -21,8 +21,12 @@ const parse = (data, selectorName, selectorType) => {
     selectorType === 'classNames' ?
     data[selectorType].includes(selectorName) :
     data[selectorType] === selectorName
-
+    
   if (matchFound) {
+    result.push(data)
+  }
+
+  if (data.control && data.control[selectorType] === selectorName) {
     result.push(data)
   }
 
@@ -44,9 +48,6 @@ const parse = (data, selectorName, selectorType) => {
     }
   }
 
-  if (data.control && data.control[selectorType] === selectorName) {
-      result = result.concat(parse(data.control, selectorName, selectorType))
-  }
 
   return result
 
