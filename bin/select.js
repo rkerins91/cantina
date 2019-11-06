@@ -26,6 +26,10 @@ const parse = (data, selectorName, selectorType) => {
     result.push(data)
   }
 
+  if (data.control && data.control[selectorType] === selectorName) {
+    result.push(data.control)
+  }
+
   if (Array.isArray(data)) {
     for (let i = 0; i < data.length; i++) {
       result = result.concat(parse(data[i], selectorName, selectorType))
@@ -44,9 +48,6 @@ const parse = (data, selectorName, selectorType) => {
     }
   }
 
-  if (data.control && data.control[selectorType] === selectorName) {
-      result = result.concat(parse(data.control, selectorName, selectorType))
-  }
 
   return result
 
