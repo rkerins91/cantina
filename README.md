@@ -1,4 +1,4 @@
-# Cantina Coding Challenge
+# Coding Challenge
 
 The functionality of this project is to parse through a nested object and return all the views that match the selector entered by the user.
 
